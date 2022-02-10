@@ -1,7 +1,7 @@
 function [L] =Outlier_Detect(B)
 A=zscore(B);
 K= abs(A);
-T=[2.5,2.7,2.9,3.1,3.3,3.5];
+T=Outlier_Val_Properties.ThreshVal;
  fprintf('The number of detected outliers in your inputs are listed below\n')
  fprintf('%2s%12s%16s\n','Sno','Threshold','Nbr of outliers');
 fprintf ('--------------------------------\n');
